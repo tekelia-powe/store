@@ -1,0 +1,86 @@
+{% extends 'storefront/main.html' %}
+{% load static %}
+{% block content %}
+<!--Page Title-->
+<section class="page-title" style="background-image:url(https://via.placeholder.com/1920x400)">
+    <div class="auto-container">
+        <h1>Cart</h1>
+        <ul class="page-breadcrumb">
+            
+        </ul>
+    </div>
+</section>
+<!--End Page Title-->
+
+<!--Cart Section-->
+<section class="cart-section">
+    <div class="auto-container">
+        <!--Cart Outer-->
+        <div class="cart-outer">
+            <div class="table-outer">
+                <table class="cart-table">
+                    <thead class="cart-header">
+                        <tr>
+                            <th class="product-thumbnail">&nbsp;</th>
+                            <th class="product-name">Product</th>
+                            <th class="product-price">Price</th>
+                            <th class="product-quantity">Quantity</th>
+                            <th class="product-subtotal">Total</th>
+                            <th class="product-remove">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cart-item">
+                            <td class="product-thumbnail"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></td>
+                            <td class="product-name"><a href="shop-single.html">Birthday Cake</a></td>
+                            <td class="product-price">$84.00</td> 
+                            <td class="product-quantity"><div class="quantity"><label>Quantity</label><input type="number" class="qty" name="qty" value="1"> </div></td>
+                            <td class="product-subtotal"><span class="amount">$84.00</span></td>
+                            <td class="product-remove"> <a href="#" class="remove"><span class="fa fa-times"></span></a></td>
+                        </tr>
+
+                        <tr class="cart-item">
+                            <td class="product-thumbnail"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></td>
+                            <td class="product-name"><a href="shop-single.html">Candy Lollipop</a></td>
+                            <td class="product-price">$15.00</td> 
+                            <td class="product-quantity"><div class="quantity"><label>Quantity</label><input type="number" class="qty" name="qty" value="1"> </div></td>
+                            <td class="product-subtotal"><span class="amount">$15.00</span></td>
+                            <td class="product-remove"> <a href="#" class="remove"><span class="fa fa-times"></span></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cart-options clearfix">
+                <div class="pull-left">
+                    <div class="apply-coupon clearfix">
+                        <div class="form-group clearfix">
+                            <input type="text" name="coupon-code" value="" placeholder="Coupon Code">
+                        </div>
+                        <div class="form-group clearfix">
+                            <button type="button" class="theme-btn coupon-btn">Apply Coupon</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pull-right">
+                    <button type="button" class="theme-btn cart-btn">update cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-between">                    
+            <div class="column col-lg-4 offset-lg-8 col-md-6 col-sm-12">
+                <!--Totals Table-->
+                <ul class="totals-table">
+                    <li><h3>Cart Totals</h3></li>
+                    <li class="clearfix"><span class="col">Subtotal</span><span class="col price">$186.00</span></li>
+                    <li class="clearfix"><span class="col">Total</span><span class="col total-price">$186.00</span></li>
+                    <li class="text-right"><button type="submit" class="theme-btn proceed-btn">Proceed to Checkout</button></li>
+                </ul>
+            </div>  
+        </div>
+    </div>
+</section>
+<!--End Cart Section-->
+{% endblock %}

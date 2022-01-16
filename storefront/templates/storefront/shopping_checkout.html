@@ -1,0 +1,329 @@
+{% extends 'storefront/main.html' %}
+{% load static %}
+{% block content %}
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url(https://via.placeholder.com/1920x400)">
+        <div class="auto-container">
+            <h1>Checkout</h1>
+            
+        </div>
+    </section>
+    <!--End Page Title-->
+
+     <!--CheckOut Page-->
+    <section class="checkout-page">
+        <div class="auto-container">
+            <!--Default Links-->
+            <div class="default-links">
+                <div class="message-box with-icon info"><div class="icon-box"><span class="icon fa fa-info"></span></div> Have a coupon? <a href="#">Click here to enter your code</a></div>
+            </div>
+            
+            <!--Checkout Details-->
+            <div class="checkout-form">
+                <form method="post" action="checkout.html">
+                    <div class="row clearfix">
+                        <!--Column-->
+                        <div class="column col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-column">
+                                <div class="sec-title">
+                                    <h3>Billing details</h3>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group">
+                                    <div class="field-label">First name <sup>*</sup></div>
+                                    <input type="text" name="field-name" value="" placeholder="">
+                                </div>
+                                
+                                <!--Form Group-->
+                                <div class="form-group">
+                                    <div class="field-label">Last name <sup>*</sup></div>
+                                    <input type="text" name="field-name" value="" placeholder="">
+                                </div>
+                                
+                                <!--Form Group-->
+                                <div class="form-group">
+                                    <div class="field-label">Company name (optional)</div>
+                                    <input type="text" name="field-name" value="" placeholder="">
+                                </div>
+                                
+                                                                
+                                <!--Form Group-->
+                                <div class="form-group">
+                                    <div class="field-label">Street address <sup>*</sup></div>
+                                    <input type="text" name="field-name" value="" placeholder="House number and street name">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="field-name" value="" placeholder="Apartment,suite,unit etc. (optional)">
+                                </div>
+                                
+                                <!--Form Group-->
+                                <div class="form-group">
+                                    <div class="field-label">City <sup>*</sup></div>
+                                    <input type="text" name="field-name" value="" placeholder="" required="">
+                                </div>
+                                
+                                <!--Form Group-->
+                                <div class="form-group">
+                                    <div class="field-label">State <sup>*</sup></div>
+                                    <input type="text" name="field-name" value="" placeholder="" required="">
+                                </div>
+                                
+                                <!--Form Group-->
+                                <div class="form-group">
+                                    <div class="field-label">ZIP <sup>*</sup></div>
+                                    <input type="text" name="field-name" value="" placeholder="" required="">
+                                </div>
+                                
+                                <!--Form Group-->
+                                <div class="form-group">
+                                    <div class="field-label">Phone</div>
+                                    <input type="text" name="field-name" value="" placeholder="">
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group">
+                                    <div class="field-label">Email Address</div>
+                                    <input type="text" name="field-name" value="" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Column-->
+                        <div class="column col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-column">
+                                <div class="sec-title">
+                                    <h3>Additional information</h3>
+                                </div>
+                            
+                                <!--Form Group-->
+                                <div class="form-group ">
+                                    <div class="field-label">Order notes (optional)</div>
+                                    <textarea class="" placeholder="Notes about your order,e.g. special notes for delivery." ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--End Checkout Details-->
+            
+            <!--Order Box-->
+            <div class="order-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="product-name">Product</th>
+                            <th class="product-total">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cart-item">
+                            <td class="product-name">Birthday Cake&nbsp;
+                                <strong class="product-quantity">× 1</strong>
+                            </td> 
+                            <td class="product-total">
+                                <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>84.00</span>
+                            </td>
+                        </tr>
+
+                        <tr class="cart-item">
+                            <td class="product-name">Candy Lollipop&nbsp;
+                                <strong class="product-quantity">× 1</strong>
+                            </td> 
+                            <td class="product-total">
+                                <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>84.00</span>
+                            </td>
+                        </tr>
+
+                        <tr class="cart-item">
+                            <td class="product-name">Classic Macaroon&nbsp;
+                                <strong class="product-quantity">× 1</strong>
+                            </td> 
+                            <td class="product-total">
+                                <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>84.00</span>
+                            </td>
+                        </tr>
+
+                        <tr class="cart-item">
+                            <td class="product-name">Coffee Cake&nbsp;
+                                <strong class="product-quantity">× 1</strong>
+                            </td> 
+                            <td class="product-total">
+                                <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>84.00</span>
+                            </td>
+                        </tr>
+
+                        <tr class="cart-item">
+                            <td class="product-name">French Macaroon&nbsp;
+                                <strong class="product-quantity">× 1</strong>
+                            </td> 
+                            <td class="product-total">
+                                <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>84.00</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="cart-subtotal">
+                            <th>Subtotal</th>
+                            <td><span class="amount">$186.00</span></td>
+                        </tr>
+                        <tr class="order-total">
+                            <th>Total</th>
+                            <td><strong class="amount">$186.00</strong> </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!--End Order Box-->
+            
+            <!--Payment Box-->
+            <div class="payment-box">
+                <div class="upper-box">
+                    <!--Payment Options-->
+                    <div class="payment-options">
+                        <script src="https://www.paypal.com/sdk/js?client-id=Afjo4n7W7nc9DPUc9j3_xlIKmAO5TWnT1QbLNbmA27T897R4MjRu4halfZyvthFkYtdqrZBSUJAMkekE&currency=USD"></script>
+
+	<script>
+		var total = '{{order.get_cart_total}}'
+        // Render the PayPal button into #paypal-button-container
+        paypal.Buttons({
+
+        	style: {
+                color:  'blue',
+                shape:  'rect',
+            },
+
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value:parseFloat(total).toFixed(2)
+                        }
+                    }]
+                });
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(orderData) {
+					submitFormData()
+                    // Successful capture! For demo purposes:
+                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                    var transaction = orderData.purchase_units[0].payments.captures[0];
+                    alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+
+                    // Replace the above to show a success message within this page, e.g.
+                    // const element = document.getElementById('paypal-button-container');
+                    // element.innerHTML = '';
+                    // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                    // Or go to another URL:  actions.redirect('thank_you.html');
+                });
+            }
+
+
+        }).render('#paypal-button-container');
+    </script>
+
+	<script type="text/javascript">
+		var shipping = '{{order.shipping}}'
+
+		if (shipping == 'False'){
+		 	document.getElementById('shipping-info').innerHTML = ''
+		}
+
+		if (user != 'AnonymousUser'){
+		 	document.getElementById('user-info').innerHTML = ''
+		 }
+
+		if (shipping == 'False' && user != 'AnonymousUser'){
+			//Hide entire form if user is logged in and shipping is false
+				document.getElementById('form-wrapper').classList.add("hidden");
+				//Show payment if logged in user wants to buy an item that does not require shipping
+			    document.getElementById('payment-info').classList.remove("hidden");
+		}
+
+		var form = document.getElementById('form')
+		form.addEventListener('submit', function(e){
+	    	e.preventDefault()
+	    	console.log('Form Submitted...')
+	    	document.getElementById('form-button').classList.add("hidden");
+	    	document.getElementById('payment-info').classList.remove("hidden");
+	    })
+
+		/*
+	    document.getElementById('make-payment').addEventListener('click', function(e){
+	    	submitFormData()
+	    })
+	    */
+
+	    function submitFormData(){
+	    	console.log('Payment button clicked')
+
+	    	var userFormData = {
+				'name':null,
+				'email':null,
+				'total':total,
+			}
+
+			var shippingInfo = {
+				'address':null,
+				'city':null,
+				'state':null,
+				'zipcode':null,
+			}
+
+			if (shipping != 'False'){
+	    		shippingInfo.address = form.address.value
+		    	shippingInfo.city = form.city.value
+		    	shippingInfo.state = form.state.value
+		    	shippingInfo.zipcode = form.zipcode.value
+	    	}
+
+	    	if (user == 'AnonymousUser'){
+	    		userFormData.name = form.name.value
+	    		userFormData.email = form.email.value
+	    	}
+
+	    	console.log('Shipping Info:', shippingInfo)
+	    	console.log('User Info:', userFormData)
+
+	    	var url = '/process_order/'
+	    	fetch(url, {
+	    		method:'POST',
+	    		headers:{
+	    			'Content-Type':'application/json',
+	    			'X-CSRFToken':csrftoken,
+	    		}, 
+	    		body:JSON.stringify({'form':userFormData, 'shipping':shippingInfo}),
+	    		
+	    	})
+	    	.then((response) => response.json())
+	    	.then((data) => {
+				console.log('Success:', data);
+				alert('Transaction completed');  
+
+				cart = {}
+				document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+
+				window.location.href = "{% url 'store' %}"
+
+				})
+	    }
+	</script>
+                        <div class="text">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a href="#">privacy policy.</a></div>
+                    </div>
+                </div>
+                <div class="lower-box">
+                    <a href="#" class="theme-btn"><span class="btn-title">Place Order</span></a>
+                </div>
+            </div>
+            <!--End Payment Box-->
+        </div>
+    </section>
+    <!--End CheckOut Page-->
+
+{% endblock %}

@@ -1,0 +1,300 @@
+
+{% extends 'storefront/main.html' %}
+{% load static %}
+{% block content %}
+
+<!--Page Title-->
+    <section class="page-title" style="background-image:url(https://via.placeholder.com/1920x400)">
+        <div class="auto-container">
+            <h1>Shop</h1>
+            
+        </div>
+    </section>
+    <!--End Page Title-->
+
+    <!--Sidebar Page Container-->
+    <div class="sidebar-page-container">
+        <div class="auto-container">
+            <div class="row clearfix">
+
+                <!--Content Side-->
+                <div class="content-side col-lg-9 col-md-12 col-sm-12">
+                    <div class="our-shop">
+                        <div class="shop-upper-box clearfix">
+                            <div class="items-label">Showing all 12 results</div>
+                            <div class="orderby">
+                                <select name="orderby" class="sortby-select select2-offscreen">
+                                    <option value="popularity">Sort by popularity</option>
+                                    <option value="rating" >Sort by average rating</option>
+                                    <option value="date" >Sort by newness</option>
+                                    <option value="price" >Sort by price: low to high</option>
+                                    <option value="price-desc" >Sort by price: high to low</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row clearfix">
+                            
+                            <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <div class="sale-tag">sale!</div>
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">Authentic Macaroons</a></h4>
+                                        <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star light"></span></div>
+                                        <div class="price"><del>$29.00</del> $25.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">Birthday Cake</a></h4>
+                                        <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star light"></span></div>
+                                        <div class="price">$84.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">Candy Lollipop</a></h4>
+                                        <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star light"></span><span class="fa fa-star light"></span><span class="fa fa-star light"></span></div>
+                                        <div class="price">$15.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">Classic Macaroon</a></h4>
+                                        <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star light"></span></div>
+                                        <div class="price">$22.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">Coffee Cake</a></h4>
+                                        <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star light"></span><span class="fa fa-star light"></span><span class="fa fa-star light"></span></div>
+                                        <div class="price">$39.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <div class="sale-tag">sale!</div>
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">French Macaroon</a></h4>
+                                        <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star light"></span></div>
+                                        <div class="price">$17.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">Happy Ninja</a></h4>
+                                        <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star light"></span></div>
+                                        <div class="price">$35.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">Hearts Lollipop</a></h4>
+                                        <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star light"></span></div>
+                                        <div class="price">$17.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">Lemon Lollipop</a></h4>
+                                        <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star light"></span></div>
+                                        <div class="price">$35.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">Limo Lollipop</a></h4>
+                                        <div class="rating"></div>
+                                        <div class="price">$32.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <div class="sale-tag">sale!</div>
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">Premium Lollipop</a></h4>
+                                        <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star light"></span><span class="fa fa-star light"></span><span class="fa fa-star light"></span></div>
+                                        <div class="price"><del>$15.00</del> $9.00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shop Item --> 
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a href="shop-single.html"><img src="https://via.placeholder.com/300x300" alt=""></a></figure>
+                                        <div class="btn-box"><a href="shopping-cart.html">Add to cart</a></div>
+                                    </div>
+                                    <div class="lower-content">
+                                        <h4 class="name"><a href="shop-single.html">Yami Makaroons</a></h4>
+                                        <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star light"></span></div>
+                                        <div class="price">$17.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Sidebar Side-->
+                <div class="sidebar-side sticky-container col-lg-3 col-md-12 col-sm-12">
+                    <aside class="sidebar theiaStickySidebar">
+                        <div class="sticky-sidebar">
+                            <!-- Search Widget -->
+                            <div class="sidebar-widget search-widget">
+                                <form method="post" action="contact.html">
+                                    <div class="form-group">
+                                        <input type="search" name="search-field" value="" placeholder="Search products…" required>
+                                        <button type="submit"><span class="icon fa fa-search"></span></button>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <!-- Cart Widget -->
+                            <div class="sidebar-widget cart-widget">
+                                <div class="widget-content">
+                                    <h3 class="widget-title">Cart</h3>
+                                    
+                                    <div class="shopping-cart">
+                                        <ul class="shopping-cart-items">
+                                            <li class="cart-item">
+                                                <img src="https://via.placeholder.com/300x300" alt="#" class="thumb" />
+                                                <span class="item-name">Birthday Cake</span>
+                                                <span class="item-quantity">1 x <span class="item-amount">$84.00</span></span>
+                                                <a href="shop-single.html" class="product-detail"></a>
+                                                <button class="remove-item"><span class="fa fa-times"></span></button>
+                                            </li>
+
+                                            <li class="cart-item">
+                                                <img src="https://via.placeholder.com/300x300" alt="#" class="thumb"  />
+                                                <span class="item-name">French Macaroon</span>
+                                                <span class="item-quantity">1 x <span class="item-amount">$13.00</span></span>
+                                                <a href="shop-single.html" class="product-detail"></a>
+                                                <button class="remove-item"><span class="fa fa-times"></span></button>
+                                            </li>
+                                        </ul>
+
+                                        <div class="cart-footer">
+                                            <div class="shopping-cart-total"><strong>Subtotal:</strong> $97.00</div>
+                                            <a href="cart.html" class="theme-btn">View Cart</a>
+                                            <a href="checkout.html" class="theme-btn">Checkout</a>
+                                        </div>
+                                    </div> <!--end shopping-cart -->
+                                </div>
+                            </div>
+
+                            <!-- Range Slider Widget -->
+                            <div class="sidebar-widget rangeslider-widget">
+                                <div class="widget-content">
+                                    <h3 class="widget-title">Price Filter</h3>
+                                    
+                                    <div class="range-slider-one clearfix">
+                                        <div class="price-range-slider"></div>
+                                        <div class="clearfix">
+                                            <div class="pull-left input-box">
+                                                <div class="title">Price:</div>
+                                                <div class="input"><input type="text" class="property-amount" name="field-name" readonly></div>
+                                            </div>
+                                            <div class="pull-right btn-box">
+                                                <a href="#" class="theme-btn"><span class="btn-title">Filtter</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Sidebar Page Container-->
+
+{% endblock %}

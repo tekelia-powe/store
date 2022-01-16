@@ -1,0 +1,84 @@
+body {
+  background-color: black;
+  font-family: cursive;
+  color: #CDCDCD;
+}
+.mountain-head {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+    background-color: #1F3D0C;
+    color: lightskyblue;
+  }
+.tn-cabin-title {
+  text-align: center;
+  border: 5px solid black;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.img-tn {
+  border: 5px solid black;
+
+}
+
+.img-head {
+  width: 35%;
+  height: auto;
+}
+
+.head-tag {
+  text-align: center;
+
+}
+.tn-cabins {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
+}
+.tn-inside {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1%;
+}
+.tn-mountains {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1%;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  padding-left: 38%;
+}
+.btn {
+  width: 20%;
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
