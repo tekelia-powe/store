@@ -6,6 +6,8 @@
 <title>The Sweet Spot </title>
 
 <!-- Stylesheets -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
 <link href="{% static 'plugins/revolution/css/settings.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
 <link href="{% static 'plugins/revolution/css/layers.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
@@ -22,6 +24,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<script type="text/javascript">
+    var user = '{{request.user}}'
+
+    function getToken(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getToken('csrftoken')
+
+    function getCookie(name) {
+        // Split cookie string and get all individual name=value pairs in an array
+        var cookieArr = document.cookie.split(";");
+
+        // Loop through the array elements
+        for(var i = 0; i < cookieArr.length; i++) {
+            var cookiePair = cookieArr[i].split("=");
+
+            /* Removing whitespace at the beginning of the cookie name
+            and compare it with the given string */
+            if(name == cookiePair[0].trim()) {
+                // Decode the cookie value and return
+                return decodeURIComponent(cookiePair[1]);
+            }
+        }
+
+        // Return null if not found
+        return null;
+    }
+    var cart = JSON.parse(getCookie('cart'))
+
+    if (cart == undefined){
+        cart = {}
+        console.log('Cart Created!', cart)
+        document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+    }
+    console.log('Cart:', cart)
+
+</script>
+
 </head>
 
 <body>
@@ -128,7 +180,7 @@
                                 <li class="dropdown">Shop
                                     <ul>
                                         <li><a href="{% url 'shop' %}">Shop</a></li>
-                                        <li><a href="{% url 'shopping_cart' %}">Cart</a></li>
+                                        <li><a href="{% url 'cart' %}">Cart</a></li>
                                         <li><a href="{% url 'checkout' %}">Checkout</a></li>
                                         <li><a href="{% url 'login' %}">My account</a></li>
                                     </ul>
@@ -140,11 +192,12 @@
                     <!-- Main Menu End-->
 
                     <div class="outer-box clearfix">
-                        <!-- Shoppping Car -->
+                        <!-- Shoppping Cart -->
                         <div class="cart-btn">
-                            <a href="shopping-cart.html"><i class="icon flaticon-commerce"></i> <span class="count">2</span></a>
+                            <a href="{% url 'cart' %}"><i class="icon flaticon-commerce"></i> <span class="count">{{cartItems}}</span></a>
+                            
 
-                            <div class="shopping-cart">
+                            <!-- <div class="shopping-cart">
                                 <ul class="shopping-cart-items">
                                     <li class="cart-item">
                                         <img src="{% static 'images/placeholder.png' %}" alt="#" class="thumb" />
@@ -168,7 +221,8 @@
                                     <a href="cart.html" class="theme-btn">View Cart</a>
                                     <a href="checkout.html" class="theme-btn">Checkout</a>
                                 </div>
-                            </div> <!--end shopping-cart -->
+                            </div>  -->
+                            <!--end shopping-cart -->
                         </div>
 
                         <!-- Search Btn -->
@@ -376,6 +430,6 @@
 <script src="{% static 'js/appear.js' %}"></script>
 <script src="{% static 'js/script.js' %}"></script>
 
-
+<script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
 </body>
 </html>

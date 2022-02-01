@@ -8,6 +8,9 @@ from .utils import cookieCart, cartData, guestOrder
 def home(request):
 	return render(request, 'storefront/home.html')
 
+def register(request):
+	return render(request, 'storefront/register.html')
+
 def contact(request):
 	return render(request, 'storefront/contact.html')
 
@@ -17,14 +20,14 @@ def menu(request):
 def gallery(request):
 	return render(request, 'storefront/gallery.html')
 
-def shop(request):
-	return render(request, 'storefront/shop.html')
+# def store(request):
+# 	return render(request, 'storefront/store.html')
 
-def shopping_cart(request):
-	return render(request, 'storefront/shopping_cart.html')
+# def shopping_cart(request):
+# 	return render(request, 'storefront/shopping_cart.html')
 
-def shopping_checkout(request):
-	return render(request, 'storefront/shopping_checkout.html')
+# def shopping_checkout(request):
+# 	return render(request, 'storefront/checkout.html')
 
 def login(request):
 	return render(request, 'storefront/login.html')
@@ -32,7 +35,7 @@ def login(request):
 def fundraising(request):
 	return render(request, 'storefront/fundraising.html')
 
-def store(request):
+def shop(request):
 	data = cartData(request)
 
 	cartItems = data['cartItems']
@@ -40,8 +43,8 @@ def store(request):
 	items = data['items']
 
 	products = Product.objects.all()
-	context = {'products':products, 'cartItems':cartItems}
-	return render(request, 'storefront/store.html', context)
+	context = {'items':items, 'order':order,'products':products, 'cartItems':cartItems}
+	return render(request, 'storefront/shop.html', context)
 
 
 def cart(request):
@@ -52,7 +55,7 @@ def cart(request):
 	items = data['items']
 
 	context = {'items':items, 'order':order, 'cartItems':cartItems}
-	return render(request, 'storefront/cart.html', context)
+	return render(request, 'storefront/shopping_cart.html', context)
 
 def checkout(request):
 	data = cartData(request)
@@ -62,7 +65,7 @@ def checkout(request):
 	items = data['items']
 
 	context = {'items':items, 'order':order, 'cartItems':cartItems}
-	return render(request, 'storefront/checkout.html', context)
+	return render(request, 'storefront/shopping_checkout.html', context)
 
 def updateItem(request):
 	data = json.loads(request.body)

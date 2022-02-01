@@ -5,10 +5,9 @@ from . import views
 urlpatterns = [
 	#Leave as empty string for base url
 	path('', views.home, name="home"),
-	path('store', views.store, name="store"),
 	path('cart/', views.cart, name="cart"),
-	path('shopping_cart/', views.shopping_cart, name="shopping_cart"),
-	path('checkout/', views.shopping_checkout, name="checkout"),
+	path('checkout/', views.checkout, name="checkout"),
+	path('register/', views.register, name="register"),
 	path('contact/', views.contact, name="contact"),
 	path('menu/', views.menu, name="menu"),
 	path('gallery/', views.gallery, name="gallery"),

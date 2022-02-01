@@ -5,7 +5,7 @@
     <!--Page Title-->
     <section class="page-title" style="background-image:url(https://via.placeholder.com/1920x400)">
         <div class="auto-container">
-            <h1>My Account - Login</h1>
+            <h1>My Account - Register</h1>
             
         </div>
     </section>
@@ -16,31 +16,35 @@
         <div class="auto-container">
             <!-- Login Form -->
             <div class="login-form">
-                <h2>Login</h2>
-                <p>New User? <a href="{% url 'register' %}">Register Here</a></p>
-                <!--Login Form-->
+                <h2>Register</h2>
+                
+                <!--Registration Form-->
                 <form method="post" action="contact.html">
                     <div class="form-group">
-                        <label>Username or email address *</label>
+                        <label>Name *</label>
+                        <input type="text" name="name" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" name="email" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Username *</label>
                         <input type="text" name="username" placeholder="" required>
                     </div>
-                    
                     <div class="form-group">
                         <label>Password *</label>
-                        <input type="password" name="email" placeholder="" required>
+                        <input type="password" name="password" placeholder="" required>
                     </div>
+                    <div class="form-group">
+                        <label>Password *</label>
+                        <input type="password" name="password2" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="theme-btn" type="submit" name="submit-form" value="Register">
+                    </div>
+
                     
-                    <div class="form-group">
-                        <input class="theme-btn" type="submit" name="submit-form" value="Log in">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="checkbox" name="shipping-option" id="account-option-1">&nbsp; <label for="account-option-1">Remember me</label>
-                    </div>
-
-                    <div class="form-group pass">
-                        <a href="#" class="psw">Lost your password?</a>
-                    </div>
                 </form>
             </div>
             <!--End Login Form -->  
